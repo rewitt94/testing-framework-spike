@@ -12,9 +12,10 @@ class DrS:
 
     def run_tests(self):
         for x in self.tests:
+            print(x['name'])
             try:
-                print(colored('PASSED','green')) if x()['result'] else print(colored(f"FAILED: {x()['reason']}", 'red'))
+                print(colored('PASSED','green')) if x['function']()['result'] else print(colored(f"FAILED: {x['function']()['reason']}", 'red'))
             except BaseException as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
-                print(colored(f"{e}",'red'))
-                print(traceback.format_list(traceback.extract_tb(exc_tb))[-1])
+                print(colored(f"ERROR: {e}",'red'))
+                print(colored(traceback.format_list(traceback.extract_tb(exc_tb))[-1], 'red'))
