@@ -16,5 +16,5 @@ class DrS:
                 print(colored('PASSED','green')) if x()['result'] else print(colored(f"FAILED: {x()['reason']}", 'red'))
             except BaseException as e:
                 exc_type, exc_obj, exc_tb = sys.exc_info()
-                print(colored(f"{e}",'green'))
+                print(colored(f"{e}",'red'))
                 print(traceback.format_list(traceback.extract_tb(exc_tb))[-1])
