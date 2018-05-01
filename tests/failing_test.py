@@ -1,2 +1,4 @@
+import expect
+
 def test_five():
-    return 1 == 2
+    return expect.Expect(1).to_equal(2)

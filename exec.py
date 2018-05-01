@@ -1,4 +1,3 @@
-import os
 import drs
 import tests
 
