@@ -1,12 +1,12 @@
 import drs
 import tests
+import emoji
 
 Doc = drs.DrS()
 
 count = 0
 
 for x in dir(tests):
-    print(x)
     if x[-4:] == '_drs':
         module = getattr(tests, x)
         for y in dir(module):

@@ -8,5 +8,5 @@ class Expect:
         else:
             return {
                 "result": False,
-                "reason": f"\nexpected: {self.expectation}\ngot: {comparison}\n"
+                "reason": f"\nexpected: {self.expectation}\ngot: {comparison}"
             }
